@@ -1,6 +1,0 @@
-smoki|smoki|10|20
-cokolado|cokolado|40|5
-cips|cips|50|10
-sok|sok|70|20
-mastiki|mastiki|30|30
-sok|sok|70|15
