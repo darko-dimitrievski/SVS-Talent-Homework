@@ -24,16 +24,16 @@ public class ImprovedWordCounter {
 				while ((line = br.readLine()) != null) {
 					String[] parts = line.split(" ");
 					for (int i = 0; i < parts.length; i++) {
-						listOfStrings.add(parts[i]);
+						listOfStrings.add(StringUtils.capitalize(parts[i]));
 					}
 				}
 
 				for (String zbor : listOfStrings) {
-					if (mapa.containsKey(StringUtils.capitalize(zbor))) {
-						mapa.put(StringUtils.capitalize(zbor),
-								mapa.get(StringUtils.capitalize(zbor)) + 1);
+					if (mapa.containsKey(zbor)) {
+						mapa.put(zbor,
+								mapa.get(zbor) + 1);
 					} else {
-						mapa.put(StringUtils.capitalize(zbor), 1);
+						mapa.put(zbor, 1);
 					}
 				}
 			} catch (IOException e) {
