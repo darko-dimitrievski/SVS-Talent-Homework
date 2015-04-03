@@ -1,7 +1,7 @@
-package md.motionDetection;
+package motionDetection;
 
-import md.alarm.Alarm;
-import md.imageCapture.ImageCaptureDeviceImpl;
+import imageCapture.ImageCaptureDeviceImpl;
+import alarm.Alarm;
 
 public class MotionDetector implements MotionDetectorImpl {
 

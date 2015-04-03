@@ -1,4 +1,4 @@
-package md.imageCapture;
+package imageCapture;
 
 import java.util.Scanner;
 

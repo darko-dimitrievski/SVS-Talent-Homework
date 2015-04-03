@@ -1,7 +1,7 @@
-import md.alarm.Alarm;
-import md.alarm.Police;
-import md.imageCapture.ImageCaptureDevice;
-import md.motionDetection.MotionDetector;
+import imageCapture.ImageCaptureDevice;
+import alarm.Alarm;
+import alarm.Police;
+import motionDetection.MotionDetector;
 
 public class MotionDetectorApp {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package md.imageCapture;
+package imageCapture;
 
 public interface ImageCaptureDeviceImpl {
 	public String takePicture();

@@ -1,4 +1,4 @@
-package md.motionDetection;
+package motionDetection;
 
 public interface MotionDetectorImpl {
 	public void run();

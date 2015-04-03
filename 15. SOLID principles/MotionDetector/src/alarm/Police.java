@@ -1,4 +1,4 @@
-package md.alarm;
+package alarm;
 
 public class Police implements Alarm {
 
