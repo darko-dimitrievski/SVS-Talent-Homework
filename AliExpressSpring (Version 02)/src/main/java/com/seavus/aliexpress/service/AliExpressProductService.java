@@ -12,13 +12,13 @@ import com.seavus.aliexpress.shoppingBasket.ShoppingBasketImpl;
 @Service
 public class AliExpressProductService {
 	
-	ProductDaoImpl productDaoImpl = new ProductDaoImpl();
+	private ProductDaoImpl productDaoImpl;
 	ShoppingBasketImpl shoppingBasket = new ShoppingBasketImpl();
 	
-//	@Autowired
-//	public AliExpressProductService(ProductDaoImpl productDaoImpl) {
-//		this.productDaoImpl = productDaoImpl;
-//	}
+	@Autowired
+	public AliExpressProductService(ProductDaoImpl productDaoImpl) {
+		this.productDaoImpl = productDaoImpl;
+	}
 
 
 	public void addProduct(Product p) {

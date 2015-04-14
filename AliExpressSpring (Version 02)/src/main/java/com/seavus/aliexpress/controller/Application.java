@@ -1,20 +1,26 @@
 package com.seavus.aliexpress.controller;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
+import com.seavus.aliexpress.crud.daoimpl.ProductDaoImpl;
 import com.seavus.aliexpress.menu.MenuImpl;
 import com.seavus.aliexpress.service.AliExpressProductService;
 
-@SpringBootApplication
+@EnableAutoConfiguration
+@Configuration
+@ComponentScan
 public class Application implements CommandLineRunner {
 	static MenuImpl menu;
 	Scanner scanner;
-	static AliExpressProductService service;
 	
-	
+	@Autowired static AliExpressProductService service = new AliExpressProductService(new ProductDaoImpl());
 	public static void main(String[] args) {
 		System.out.println("Ali Express Springificated");
 		menu = new MenuImpl(service);

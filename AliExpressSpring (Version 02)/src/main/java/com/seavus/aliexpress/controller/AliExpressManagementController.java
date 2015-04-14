@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.seavus.aliexpress.crud.daoimpl.AccountDaoImpl;
+import com.seavus.aliexpress.crud.daoimpl.ProductDaoImpl;
 import com.seavus.aliexpress.model.Account;
 import com.seavus.aliexpress.model.Product;
 import com.seavus.aliexpress.service.AliExpressAccountService;
@@ -20,16 +22,8 @@ import com.seavus.aliexpress.shoppingBasket.ShoppingBasket;
 
 @Controller
 public class AliExpressManagementController {
-	AliExpressProductService productService = new AliExpressProductService();
-	AliExpressAccountService accountService = new AliExpressAccountService();
-//
-//	@Autowired
-//	public AliExpressManagementController(
-//			AliExpressProductService productService,
-//			AliExpressAccountService accountService) {
-//		this.productService = productService;
-//		this.accountService = accountService;
-//	}
+	@Autowired static AliExpressProductService productService = new AliExpressProductService(new ProductDaoImpl());
+	@Autowired static AliExpressAccountService accountService = new AliExpressAccountService(new AccountDaoImpl());
 
 	@ModelAttribute("product")
 	public Product getProduct() {
