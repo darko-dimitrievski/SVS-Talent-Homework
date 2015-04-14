@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: AliExpressSpring
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Darko
+Implementation-Vendor-Id: com.seavus.aliexpress
+Build-Jdk: 1.8.0_31
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

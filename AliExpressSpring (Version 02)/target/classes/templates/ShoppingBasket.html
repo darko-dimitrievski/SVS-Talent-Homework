@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Products in shopping basket</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<h4>Products in your shopping basket:</h4>
+	<table>
+		<tr th:each="item : ${shoppingBasket}">
+			<td th:text="${item.name}"></td>
+		</tr>
+	</table>
+	<p>You should pay:</p>
+	<p th:text="${suma}">suma</p>
+	<p>If you want to pay, make you account <a th:href="@{/accounts}">HERE</a></p>
+	<p>If you want to buy another product go to the <a th:href="@{/products}">LIST OF PRODUCTS</a></p>
+</body>
+</html>

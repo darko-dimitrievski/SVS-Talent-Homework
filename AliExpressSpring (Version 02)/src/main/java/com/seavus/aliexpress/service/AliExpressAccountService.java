@@ -1,0 +1,24 @@
+package com.seavus.aliexpress.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.seavus.aliexpress.crud.daoimpl.AccountDaoImpl;
+import com.seavus.aliexpress.model.Account;
+
+@Service
+public class AliExpressAccountService {
+	AccountDaoImpl accountDaoImpl = new AccountDaoImpl();
+	
+	
+//	@Autowired
+//	public AliExpressAccountService(AccountDaoImpl accountDaoImpl) {
+//		this.accountDaoImpl = accountDaoImpl;
+//	}
+
+
+
+	public void addAccount(Account account){
+		accountDaoImpl.addAccount(account);
+	}
+}

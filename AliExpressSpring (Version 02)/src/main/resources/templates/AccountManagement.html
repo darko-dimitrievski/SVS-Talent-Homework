@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	<form action="#" th:action="@{/addAccount}" th:object="${account}"
+	method="post">
+	<p>id</p>
+	<input type="text" th:field="*{id}"/> 
+	<p>email</p>
+	<input type="text" th:field="*{email}" /> 
+	<p>password</p>
+	<input type="text" th:field="*{password}" /> 	
+	<p>TransacationBill</p>	
+	<input type="text" th:field="*{TranscationBill}" /> 		
+	<p>validThru</p>
+	<input type="text" th:field="*{validThru}" /> 		
+	<p>CVNNumber</p>
+	<input type="text" th:field="*{CVNNumber}" />
+	<p>name</p> 		
+	<input type="text" th:field="*{name}" /> 
+	<p>surname</p>		
+	<input type="text" th:field="*{surname}" /> 
+	<p>Date of birth</p>
+	<input type="text" th:field="*{DOB}" /> 
+	<br />				
+	<br /> 
+	<input type="submit" value="Add account" />
+</form>
+</html>
